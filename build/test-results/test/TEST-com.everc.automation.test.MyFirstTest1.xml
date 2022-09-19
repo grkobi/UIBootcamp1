@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.everc.automation.test.MyFirstTest1" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-09-19T13:01:37" hostname="NB-262" time="7.304">
+  <properties/>
+  <testcase name="myFirstTest()" classname="com.everc.automation.test.MyFirstTest1" time="7.303"/>
+  <testcase name="newTest()" classname="com.everc.automation.test.MyFirstTest1" time="0.001"/>
+  <system-out><![CDATA[base class setup
+This is setup
+Before each
+After test
+Before each
+new test executed
+After test
+after all1112
+]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 105.0.5195.52 (412c95e518836d8a7d97250d62b29c2ae6a26a85-refs/branch-heads/5195@{#853}) on port 60693
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Sep 19, 2022 4:01:40 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+Sep 19, 2022 4:01:40 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 105, so returning the closest version found: 103
+Sep 19, 2022 4:01:40 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Found CDP implementation for version 105 of 103
+]]></system-err>
+</testsuite>
