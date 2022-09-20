@@ -1,15 +1,13 @@
 package com.everc.automation.test.login;
 
 import com.everc.automation.test.BaseTest;
+import com.everc.automation.framework.WebdriverRunner;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import jdk.swing.interop.SwingInterOpUtils;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.util.Date;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 
@@ -33,9 +31,9 @@ public class MyFirstTest1 extends BaseTest {
 
     @Test
     public void myFirstTest() throws InterruptedException{
-        WebDriverManager.chromedriver().setup();
+       // WebDriverManager.chromedriver().setup();
         // WebDriverManager.firefoxdriver().setup();
-        WebDriver webdriver = new ChromeDriver();
+        WebDriver webdriver = WebdriverRunner.getWebDriver();
         webdriver.get("https://google.com");
         //Thread.sleep(millis: 10_000);
       //  Assertions.assertEquals(webdriver.getTitle(), actual);

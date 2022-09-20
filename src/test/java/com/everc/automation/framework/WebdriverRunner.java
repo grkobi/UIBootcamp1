@@ -1,4 +1,5 @@
-package com.everc.automation.test.login.framework;
+package com.everc.automation.framework;
+import com.everc.automation.config.TestConfig;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -14,10 +15,10 @@ public class WebdriverRunner {
 
     public static WebDriver getWebDriver(){
         if(webDriver == null){
-            if(System.getProperty("browser").equals("chrome")){
+            if(TestConfig.CONFIG.browser().equals("chrome")){
                 WebDriverManager.chromedriver().setup();
                 webDriver = new ChromeDriver();
-            } else if (System.getProperty("browser").equals("firefox")){
+            } else if (TestConfig.CONFIG.browser().equals("firefox")){
                 WebDriverManager.firefoxdriver().setup();
                 webDriver = new FirefoxDriver();
             } else {
