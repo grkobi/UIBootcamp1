@@ -1,5 +1,6 @@
 package com.everc.automation.test.login;
-
+import java.util.ArrayList;
+import java.util.List;
 import com.everc.automation.test.BaseTest;
 import com.everc.automation.framework.WebdriverRunner;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -8,6 +9,8 @@ import org.junit.jupiter.api.*;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.By;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 
@@ -35,6 +38,8 @@ public class MyFirstTest1 extends BaseTest {
         // WebDriverManager.firefoxdriver().setup();
         WebDriver webdriver = WebdriverRunner.getWebDriver();
         webdriver.get("https://google.com");
+        WebElement element = webdriver.findElement(By.name("q"));
+        element.click();
         //Thread.sleep(millis: 10_000);
       //  Assertions.assertEquals(webdriver.getTitle(), actual);
         webdriver.close();
